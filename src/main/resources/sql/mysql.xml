@@ -3,9 +3,6 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.metanonia.hibernateSample.mapper.MysqlMapper">
-    <select id="getCandle" parameterType="CandleId" resultType="HashMap">
-        SELECT * FROM candle WHERE symbol=#{symbol} AND ts=#{timeStamp, jdbcType=TIMESTAMP}
-    </select>
 
     <insert id="insCandle" parameterType="Candle">
         INSERT INTO candle (symbol, ts, o, h, l, c, v) VALUES (

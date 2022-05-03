@@ -3,14 +3,18 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <typeAliases>
+        <typeAlias alias="CandleId" type="com.metanonia.hibernateSample.model.CandleId" />
+        <typeAlias alias="Candle" type="com.metanonia.hibernateSample.model.Candle" />
+    </typeAliases>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
-                <property name="driver" value="${driver}"/>
-                <property name="url" value="${url}"/>
-                <property name="username" value="${username}"/>
-                <property name="password" value="${password}"/>
+                <property name="driver" value="com.mysql.cj.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://localhost:3306/dvlp?characterEncoding=UTF-8&amp;serverTimezone=UTC"/>
+                <property name="username" value="dvl"/>
+                <property name="password" value="passwd"/>
             </dataSource>
         </environment>
     </environments>
