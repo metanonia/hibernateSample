@@ -4,13 +4,13 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
     <!--  EntityManagerFactory 생성 시 사용되는 persistence name 입니다. -->
     <persistence-unit name="my-persistence">
-        <class>com.metanonia.hibernateSample.model.Binance</class>
+        <class>com.metanonia.hibernateSample.model.Candle</class>
         <properties>
             <!-- 필수 속성 -->
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.user" value="metanonia"/>
-            <property name="javax.persistence.jdbc.password" value="M2tan0n1a!"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://dvlp.metanonia.com:3306/metanonia?characterEncoding=UTF-8&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="dvl"/>
+            <property name="javax.persistence.jdbc.password" value="passwd"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dvlp?characterEncoding=UTF-8&amp;serverTimezone=UTC"/>
 
             <!-- 하이버네이트 사용 시 여러 가지 종류의 DB를 사용할 수 있는데, 명시적으로 사용하는 DB를 적어서 해당 디비에서 사용하는 문법을 적용할 수 있습니다.-->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>

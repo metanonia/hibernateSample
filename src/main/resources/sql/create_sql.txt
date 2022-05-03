@@ -1,0 +1,11 @@
+use dvlp;
+CREATE TABLE `candle` (
+  `symbol` varchar(45) NOT NULL,
+  `ts` datetime NOT NULL,
+  `o` decimal(20,5) DEFAULT NULL,
+  `h` decimal(20,5) DEFAULT NULL,
+  `l` decimal(20,5) DEFAULT NULL,
+  `c` decimal(20,5) DEFAULT NULL,
+  `v` decimal(20,5) DEFAULT NULL,
+  PRIMARY KEY (`symbol`,`ts`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
